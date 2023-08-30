@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+  <link rel="stylesheet" href="signin.css">
+  <link rel="shortcut icon" href="imgs/favicon (1).ico" />
+  <!-- title -->
+  <title>signup | MOVENPICK</title>
+  <link rel="shortcut icon" href="imgs/image/favicon.ico" />
+</head>
+
+<body>
+ 
+
+  <div class="container">
+    <div class="message signup">
+      <div class="btn-wrapper">
+        <button class="button" id="signup">Sign Up</button>
+        <button class="button" id="login"> Login</button>
+      </div>
+    </div>
+    <div class="form form--signup">
+      <div class="form--heading">Welcome! Sign Up</div>
+      <form autocomplete="off">
+        <input type="text" placeholder="firstName" id="name">
+        <input type="text" placeholder="address" id="address" >
+        <!--   pattern="[א-תA-Za-z]+" pattern="[א-תA-Z0-9a-z]+-->
+        <input type="tel" placeholder="phone" id="phone" required="required" >
+        <!-- pattern="^0\d{1,2}-?\d{7}" -->
+        <input type="email" placeholder="Email" id="email" required="required">
+        <!--  pattern="^[A-Z0-9a-z.]+@{1}[A-Z0-9a-z]+.{1}[A-Z0-9a-z.]+$" -->
+        <input type="password" placeholder="Password" id="password" minlength="4" maxlength="8" required="required">
+        <a class="button text-center text-decoration-none text-white sighUpButton">Sign Up</a>
+        <button class="previus button" type="button">Back to previous page</button>
+      </form>
+    </div>
+    <div class="form form--login">
+      <div class="form--heading">Welcome back! </div>
+      <form autocomplete="off">
+        <input type="text" placeholder="Name" id="loginNM">
+        <input type="password" placeholder="Password" id="loginPW" minlength="4" maxlength="8" required="required">
+        <a class="button text-center text-decoration-none text-white logInButton">Login</a>
+      </form>
+    </div>
+  </div>
+</body>
+<script src="jquery-3.5.1.js"></script>
+<script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.js"></script>
+<script src="signin.js"></script>
+
+</html>

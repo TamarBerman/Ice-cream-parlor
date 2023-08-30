@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="payment.css">
+    <link rel="stylesheet" href="/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="mainStyle (2).css">
+    <!-- icon link -->
+    <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+    <!-- title -->
+    <title>payment page | MOVENPICK</title>
+    <link rel="shortcut icon" href="imgs/image/favicon.ico" />
+
+</head>
+
+<body>
+    <nav class="navbar navbar-expand-lg  fixed-top header"
+        style="background-color:white ;  border-bottom: 1px solid #000000;">
+        <!-- menu -->
+        <!-- gelato logo -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homePage.html" target="_self"><img id="logo_img"
+                    src="imgs/image/Mövenpick_logo_ice_cream.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="input-group rounded bg-transparent w-50 pe-6" style="width: 500px!important; margin: auto">
+                <button class="input-group-text border-0 bg-transparent" id="myBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="search" class="form-control rounded navSearch" id="myInput" value="" placeholder="Search"
+                    aria-label="Search" aria-describedby="search-addon" />
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- ice cream -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle IC" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" target="_blank" name="פירות">גלידות</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" id="packageIceCream">מארזים</a></li>
+                            <li><a class="dropdown-item" id="iceCreamBolls" name="כדורים">כדורים</a></li>
+                        </ul>
+                    </li>
+                    <!-- frozen yogurt -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle FRZ" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            פרוזן יוגורט </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" id="bioFrozen">פרוזן ביו</a></li>
+                            <li><a class="dropdown-item" href="#" id="fruitFrozen">פרוזן פירות</a></li>
+                        </ul>
+                    </li>
+                    <!-- deserts -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle SW" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            מתוקים </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" id="belginWaffle">וופל בלגי</a></li>
+                            <li><a class="dropdown-item" href="#" id="frnchKrep">קרפ צרפתי </a></li>
+                        </ul>
+                    </li>
+                    <!-- icons menu -->
+                    <li class="nav-item"><a class="nav-link" href="signin.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="myCart.html"><i
+                                class="fa-solid fa-cart-shopping"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- MultiStep Form -->
+    <div class="container-fluid below" id="grad1">
+        <div class="row justify-content-center mt-0">
+            <div class="col-11 col-sm-9 col-md-7 col-lg-6 text-center p-0 mt-3 mb-2">
+                <div class="card px-0 pt-4 pb-0 mt-3 mb-3">
+                    <h1 class="my_h1">your order in loud</h1>
+                    <p>* יש למלאות את כל השדות הנדרשים </p>
+                    <div class="row">
+                        <div class="col-md-12 mx-0">
+                            <form id="msform">
+                                <!-- progressbar -->
+                                <ul id="progressbar">
+                                    <li class="active" id="account"><strong>התחברות לחשבון</strong></li>
+                                    <li id="personal"><strong>פרטים אישיים</strong></li>
+                                    <li id="payment"><strong>תשלום</strong></li>
+                                    <li id="confirm"><strong>סיום</strong></li>
+                                </ul>
+                                <!-- fieldsets -->
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title"> פרטי חשבון</h2>
+                                        <input type="email" id="email" placeholder="אימייל" />
+                                        <input type="text" id="uname" placeholder="שם משתמש" />
+                                        <input type="password" id="pwd" placeholder="סיסמא" />
+                                        <input type="password" id="cpwd" placeholder="אימות סיסמא" />
+                                    </div>
+                                    <input type="button" id="nextstep_1" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">פרטים אישיים</h2>
+                                        <input type="text" id="fname" placeholder="שם מלא" />
+                                        <input type="text" id="address" placeholder="כתובת" />
+                                        <input type="text" id="phno" placeholder="כתובת נוספת" />
+                                        <input type="text" id="phno_2" required="required" pattern="^0\d{1,2}-?\d{7}"
+                                            placeholder="פלאפון" />
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" id="nextstep_2" class="next action-button" value="Next Step" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title">פרטי תשלום</h2>
+                                        <div class="radio-group">
+                                            <div class='radio' data-value="credit"><img
+                                                    src="imgs/image/mc_sym_card_gld_1280x720_2.jpg" width="200px"
+                                                    height="100px"></div>
+                                            <br>
+                                        </div>
+                                        <label class="pay">*שם בעל כרטיס אשראי</label>
+                                        <input type="text" id="holdername" placeholder="" />
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <label class="pay">מס' כרטיס*</label>
+                                                <input type="text" id="cardno" placeholder="" minlength="12"
+                                                    maxlength="16" />
+                                            </div>
+                                            <div class="col-3">
+                                                <label class="pay">CVC*</label>
+                                                <input type="password" id="cvcpwd" placeholder="***" minlength="3"
+                                                    maxlength="3" />
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-3">
+                                                <label class="pay">תאריך תפוגה*</label>
+                                            </div>
+                                            <div class="col-9">
+                                                <select class="list-dt" id="month" name="expmonth">
+                                                    <option selected>Month</option>
+                                                    <option>January</option>
+                                                    <option>February</option>
+                                                    <option>March</option>
+                                                    <option>April</option>
+                                                    <option>May</option>
+                                                    <option>June</option>
+                                                    <option>July</option>
+                                                    <option>August</option>
+                                                    <option>September</option>
+                                                    <option>October</option>
+                                                    <option>November</option>
+                                                    <option>December</option>
+                                                </select>
+                                                <select class="list-dt" id="year" name="expyear">
+                                                    <option selected>Year</option>
+                                                    <option>2022</option>
+                                                    <option>2023</option>
+                                                    <option>2024</option>
+                                                    <option>2025</option>
+                                                    <option>2026</option>
+                                                    <option>2027</option>
+                                                    <option>2028</option>
+                                                    <option>2029</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <input type="button" name="previous" class="previous action-button-previous"
+                                        value="Previous" />
+                                    <input type="button" name="make_payment" id="nextstep_3" class="next action-button"
+                                        value="Confirm" />
+                                </fieldset>
+                                <fieldset>
+                                    <div class="form-card">
+                                        <h2 class="fs-title text-center">Success !</h2>
+                                        <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-3">
+                                                <img src="imgs/delivery.gif" class="fit-image">
+                                            </div>
+                                        </div>
+                                        <br><br>
+                                        <div class="row justify-content-center">
+                                            <div class="col-7 text-center">
+                                                <h5 id="order"></h5>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script src="jquery-3.5.1.js"></script>
+<script src="payment.js"></script>
+<script src="mainApp.js"></script>
+
+</html>

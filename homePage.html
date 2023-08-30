@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- title -->
+    <title>MOOVENPICK</title>
+    <link rel="shortcut icon" href="imgs/image/favicon.ico" />
+    <!-- css links -->
+    <link rel="stylesheet" href="/bootstrap-5.2.0-beta1-dist/css/bootstrap.css">
+
+    <!-- CSS links from CDNs -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="mainStyle (2).css">
+    <!-- icon link -->
+    <link href="fontawesome-free-6.1.1-web/css/all.css" rel="stylesheet">
+</head>
+<style>
+
+</style>
+
+<body onload="load()">
+    <button type="button" class="btn btn-primary visually-hidden" id="popup" data-bs-toggle="modal"
+        data-bs-target="#exampleModal" data-bs-whatever="@getbootstrap"></button>
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title ms-3 brown" id="exampleModalLabel">MOOVENPICK | sale</h5>
+                    <button type="button" class="btn-close ms-0" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <img src="imgs/image/sale.png" class="w-100">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal"
+                        style="background-color: hwb(14 40% 42%);">הבנתי , תודה!</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <nav class="navbar navbar-expand-lg  fixed-top header"
+        style="background-color:white ;  border-bottom: 1px solid #000000;">
+        <!-- menu -->
+        <!-- gelato logo -->
+        <div class="container-fluid">
+            <a class="navbar-brand" href="homePage.html" target="_self"><img id="logo_img"
+                    src="imgs/image/Mövenpick_logo_ice_cream.png" alt=""></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="input-group rounded bg-transparent w-50 pe-6" style="width: 500px!important; margin: auto">
+                <button class="input-group-text border-0 bg-transparent" id="myBtn">
+                    <i class="fas fa-search"></i>
+                </button>
+                <input type="search" class="form-control rounded navSearch" id="myInput" value="" placeholder="Search"
+                    aria-label="Search" aria-describedby="search-addon" />
+            </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <!-- ice cream -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle IC" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false" target="_blank" name="פירות">גלידות</a>
+                        <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                            <li><a class="dropdown-item" id="packageIceCream">מארזים</a></li>
+                            <li><a class="dropdown-item" id="iceCreamBolls" name="כדורים">כדורים</a></li>
+                        </ul>
+                    </li>
+                    <!-- frozen yogurt -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle FRZ" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            פרוזן יוגורט </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" id="bioFrozen">פרוזן ביו</a></li>
+                            <li><a class="dropdown-item" href="#" id="fruitFrozen">פרוזן פירות</a></li>
+                        </ul>
+                    </li>
+                    <!-- deserts -->
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle SW" id="navbarDropdown" role="button"
+                            data-bs-toggle="dropdown" aria-expanded="false">
+                            מתוקים </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="#" id="belginWaffle">וופל בלגי</a></li>
+                            <li><a class="dropdown-item" href="#" id="frnchKrep">קרפ צרפתי </a></li>
+                        </ul>
+                    </li>
+                    <!-- icons menu -->
+                    <li class="nav-item"><a class="nav-link" href="signin.html"><i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="myCart.html"><i
+                                class="fa-solid fa-cart-shopping"></i></a></li>
+
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+
+    <div id="carouselExampleCaptions" class="carousel slide carousel-fade below" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="imgs/image/2-Movenpick_first-slideshow.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imgs/image/3-Movenpick_first-slideshow.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="imgs/image/4-Movenpick_first-slideshow.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-caption d-none d-md-block">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- counter -->
+    <div class="counter">
+        <div class="container mx-auto">
+            <div class="row py-4">
+                <div class="col-3 count">
+                    <h3 id='0101' class="fs-2 counter">0</h3>
+                    <h3 class="counter_txt">Years of ice-cream</h3>
+                </div>
+                <div class="col-3 count">
+                    <h3 id='0102' class="fs-2 counter">876</h3>
+                    <h3 class="counter_txt">Branches</h3>
+                </div>
+                <div class="col-3 count">
+                    <h3 id='0103' class="fs-2 counter">1</h3>
+                    <h3 class="counter_txt">flavors</h3>
+                </div>
+                <div class="col-3 count">
+                    <h3 class="fs-2 counter"><span id='0104'>10</span>%</h3>
+                    <h3 class="align-content-center counter_txt">You love it</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--  -->
+    <div class="row recomended_row ourHomePage-height has-bg-img">
+        <div class="col-lg-6 first_rec rec position-relative">
+            <a href="#"><button class="btn_centered position-absolute top-50 start-50 translate-middle"><i
+                        class="fa-solid fa-right-long"></i>fruitFrozen</button></a>
+        </div>
+        <div class="col-lg-6 second_rec rec position-relative">
+            <a href="#"><button class="btn_centered position-absolute top-50 start-50 translate-middle"><i
+                        class="fa-solid fa-right-long"></i>ice-cream</button></a>
+        </div>
+    </div>
+    <!-- לקוחות מספרים -->
+    <div class="container" style="margin-top: 30px;">
+        <div class="col-12 align-center">
+            <hr>
+            <h1 class="text-center text-our-font m-3">:The customers tell</h1>
+        </div>
+
+        <ul class="text-center container-fluid row ">
+            <li class="col-lg-4 col-md-4 col-sm-12 cust_love">
+                <img src="imgs/avatar1.png" class="rounded-circle" width="100px">
+                <p class="">"הזמנתי עוגת יומולדת לסבתא רבא ליומולדת גיל מאה, כל המשפחה המורחבת הגיעה לחגיה ועוגה ממש
+                    פיארה את האירוע! תוך כמה שעות מההזמנה העוגה היתה אצלי בבית על ארוזה היטב! הוספנו גם כיתוב אישי על
+                    העוגה ללא תוספת מחיר והעוגה ממש חיממה לסבתא רבא את הלב!!!"</p>
+                <h5 class="">חיים כהן</h5>
+                <small class="">ביתר עילית</small>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-12 cust_love">
+                <img src="imgs/avatar4.png" class="rounded-circle" width="100px">
+                <p class="">"הזמנו קינוחים לאירוע שהיה בשבת, שלושה קינוחים , אחד לכל סעודה, הקינוים שידרגו את האירוע!!!
+                    טעם מושלם , מעצוב אסטתי וטרי! ממליצים בחום!"</p>
+                <h5 class="" contenteditable="false">מיכאל גולדברג</h5>
+                <small class="" contenteditable="false">נהריה</small>
+            </li>
+            <li class="col-lg-4 col-md-4 col-sm-12 cust_love">
+                <img src="imgs/avatar5.png" class="rounded-circle mgb-20" width="100px" data-edit="false"
+                    data-editor="field" data-field="src[Image Path]; title[Image Title]; alt[Image Alternate Text]">
+                <p class="">"ביתי הבכורה הגעיה לגיל מצוות ורציתי לקנות משהו מיוחד ממותג אישית - ומצאתי את העוגיות רויאל
+                    אייסיג, צוות sweet-street עיצבו לי את העוגיות בדיוק לפי החלום שלי וביתי ממש התלהבה עליהם!! תודה
+                    ענקית!"</p>
+                <h5 class="">גילה לוין</h5>
+                <small class="">טלז-סטון</small>
+            </li>
+        </ul>
+    </div>
+
+    <!--עלינו  -->
+    <div class="row ourHomePage-height-lg position-relative">
+        <h1 class="text-our-font txt m-4 position-absolute top-0 end-0">...About us</h1>
+        <!-- position-absolute start-50 top-50 end-0 translate-middle-y -->
+        <p class="lh-lg w-75 m-4 position-absolute top-50 start-50 translate-middle p-au" style=" z-index: 1;
+        color: rgb(255 250 247);">במשך חודשים עמלו על פיתוח המוצרים המתכונים והגיעו לתוצאה של איכות חסרת הפשרות, המרקם
+            והטיב העולמי.
+            <br>
+
+            לחברה מפעל ליצור בסיסי גלידה אותם היא משווקת לסניפייה באמצעות מערך הפצה עצמי וכן באמצעות מערך הפצה חיצוני
+            לנקודות רחוקות בארץ ובחו"ל. <br>במפעל נמצא הציוד המתקדם ביותר בענף לייצור והכנת בסיסי גלידה בעולם,<br> תהליך
+            הייצור
+            נעשה ללא מגע ידי אדם ותהליך היצור עובר את מבחני האיכות המחמירים ביותר על פי תו תקן אירופאי מחמיר,<br> על מנת
+            להבטיח את האיכות הטובה ביותר ללקוחות ג'לטו.
+            <br>
+            בנוסף,<br> חברת ג'לטו מייצגת בישראל מספר חברות איטלקיות העוסקות בתחום ומובילות בתחומן,<br> מהם היא מייבאת את
+            כל
+            הציוד הנדרש לתפעול גלידרייה.<br> בין החברות נמנות CARPIGIANI האיטלקית המובילה בתחום מכונות הגלידה, ISA
+            האיטלקית
+            למקפיאי תצוגה וחברת TELME האיטלקית אף היא, ואת ציודם ניתן למצוא בכל אחד מסניפי הרשת.
+        </p>
+
+        <div class="col-12 about_us">
+        </div>
+
+    </div>
+
+
+    <!--  -->
+
+    <!-- טעימות מחיי ג'לטו -->
+    <div class="row ourHomePage-height-sm position-relative" style="overflow: hidden;">
+        <h1 class="text-our-font txt position-absolute top-50 start-50 translate-middle w-50">--A taste of moovenpick's
+            life</h1>
+        <!-- <button class="position-absolute bottom-0 start-50 translate-middle-x btn-to-branches"><a
+                href="homePage.html">kkk</a><i class="fa-solid fa-right-long"></i></button> -->
+        <div class="col order-5 taste"
+            style="background-image: url(imgs/tambov-russian-federation-august-movenpick-pistachio-ice-cream-box-spoon-pistachios-black-background-b-125598502.jpg);">
+        </div>
+        <div class="col order-1 taste"
+            style="background-image: url(imgs/movenpick-pistachio-ice-cream-open-box-spoon-pistach-tambov-russian-federation-august-pistachios-black-background-125598379.jpg);">
+        </div>
+    </div>
+    <!-- נשמור על קשר -->
+    <div class="keep-in-touch">
+        <hr class="w-75 text-center" style="margin: auto">
+        <form class="mx-auto text-center kit-form" style="margin: 2% 0 2% 0; width:35%">
+            <h3 class="text-our-font">Keep in touch</h3>
+            <div class="mb-3">
+                <input type="email" class="form-control email-kit" id="exampleInputEmail1" placeholder="email address"
+                    aria-describedby="emailHelp" style="text-align:left">
+            </div>
+            <div class="form-check form-switch form-check-reverse">
+                <input class="form-check-input kit-input" type="checkbox" id="flexSwitchCheckReverse">
+                <label class="form-check-label" for="flexSwitchCheckReverse">הריני לאשר קבלת דיוור של חומרים פרסומיים
+                    ועדכונים של
+                    ג'לטו גלידות ומתוקים בע"מ באמצעי המדיה השונים. ידוע לי כי הסרה מקבלת הודעות דיוור תיעשה בהתאם למפורט
+                    בתקנון לצפייה בתקנון. אני מאשר/ת ומסכים/ה לרישום פרטי במאגר המידע 700008335 של ג'לטו. אדם שפרטיו
+                    ירשמו במאגר המידע רשאי לפנות להנהלת ג'לטו ולקבל את הפרטים הרשומים אודותיו ו/או לבטל הסכמתו לקבלת
+                    דיוור.</label>
+            </div>
+            <button type="submit" class="btn btn-outline-dark">OK</button>
+        </form>
+    </div>
+
+    <!-- footer -->
+    <hr>
+    <footer class="text-white text-center text-lg-start">
+        <!-- Grid container -->
+        <div class="container p-4" style="background-color:rgb(255, 255, 255); color: hwb(14 40% 42%);">
+            <!--Grid row-->
+            <div class="row mt-4">
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-12 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4">אודותינו---</h5>
+
+                    <p>
+                        At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                        voluptatum deleniti atque corrupti.
+                    </p>
+
+                    <p>
+                        Blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+                        molestias.
+                    </p>
+
+                    <div class="mt-4">
+                        <!-- Facebook -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-facebook-f"></i></a>
+                        <!-- Dribbble -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-dribbble"></i></a>
+                        <!-- Twitter -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i class="fab fa-twitter"></i></a>
+                        <!-- Google + -->
+                        <a type="button" class="btn btn-floating btn-light btn-lg"><i
+                                class="fab fa-google-plus-g"></i></a>
+                        <!-- Linkedin -->
+                    </div>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <ul class="fa-ul" style="margin-left: 1.65em; direction: ltr;">
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-home"></i></span><span class="ms-2">טיילת אורנים,
+                                תל-אביב</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-envelope"></i></span><span
+                                class="ms-2">moovenpick@gmail.com</span>
+                        </li>
+                        <li class="mb-3">
+                            <span class="fa-li"><i class="fas fa-phone"></i></span><span class="ms-2">0583220571</span>
+                        </li>
+                    </ul>
+                </div>
+                <!--Grid column-->
+
+                <!--Grid column-->
+                <div class="col-lg-4 col-md-6 mb-4 mb-md-0">
+                    <h5 class="text-uppercase mb-4" style="color: hwb(14 40% 42%);">שעות הפתיחה</h5>
+
+                    <table class="table text-center text-white">
+                        <tbody class="fw-normal">
+                            <tr>
+                                <td class="brown">ראשון-רביעי:</td>
+                                <td class="brown">8:00 -21:00</td>
+                            </tr>
+                            <tr>
+                                <td class="brown">חמישי -שישי:</td>
+                                <td class="brown">8:00-00:00</td>
+                            </tr>
+                            <tr>
+                                <td class="brown">שבת</td>
+                                <td class="brown">סגור</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--Grid column-->
+            </div>
+            <!--Grid row-->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color:hwb(14 40% 42%);">
+            --development by tamar& tami--
+        </div>
+        <!-- Copyright -->
+    </footer>
+
+
+
+
+</body>
+<script>
+    //פונקציה למונה מספרים- counter
+    function animate(obj, initVal, lastVal, duration) {
+        let startTime = null;
+
+        //get the current timestamp and assign it to the currentTime variable
+        let currentTime = Date.now();
+
+        //pass the current timestamp to the step function
+        const step = (currentTime) => {
+
+            //if the start time is null, assign the current time to startTime
+            if (!startTime) {
+                startTime = currentTime;
+            }
+
+            //calculate the value to be used in calculating the number to be displayed
+            const progress = Math.min((currentTime - startTime) / duration, 1);
+
+            //calculate what to be displayed using the value gotten above
+            obj.innerHTML = Math.floor(progress * (lastVal - initVal) + initVal);
+
+            //checking to make sure the counter does not exceed the last value (lastVal)
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            } else {
+                window.cancelAnimationFrame(window.requestAnimationFrame(step));
+            }
+        };
+        //start animating
+        window.requestAnimationFrame(step);
+    }
+    let text1 = document.getElementById('0101');
+    let text2 = document.getElementById('0102');
+    let text3 = document.getElementById('0103');
+    let text4 = document.getElementById('0104');
+    const load = () => {
+        animate(text1, 0, 49, 6000);
+        animate(text2, 0, 150, 6000);
+        animate(text3, 0, 70, 6000);
+        animate(text4, 0, 100, 6000);
+    }
+</script>
+<!-- <script src="jquery-3.5.1.js"></script>
+<script src="bootstrap-5.2.0-beta1-dist/js/bootstrap.js"></script>
+<script src="mainApp.js"></script> -->
+
+<!-- JS scripts from CDNs -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<script src="mainApp.js"></script>
+
+
+</html>
